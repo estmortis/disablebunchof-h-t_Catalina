@@ -1,7 +1,39 @@
-updated script from pwnsdx 
+all credit to pwnsdx.. just added some more agents etc. i have tested this method and a alternative way of rm -rf all these agents.
+i find it much cleaner to just remove them completely like this ;
 
+ Example 
+
+Disable SIP 
+
+Reboot
+
+get root shell
+
+sudo -s 
+
+sudo mount -uw /
+
+sudo rm -rf /System/Library/LaunchAgents/com.apple.applespell.plist /System/Library/LaunchAgents/com.apple.appstoreagent.plist /System/Library/LaunchAgents/com.apple.cloudd.plist /System/Library/LaunchAgents/com.apple.cloudpaird.plist /System/Library/LaunchAgents/com.apple.cloudphotod.plist /System/Library/LaunchAgents/com.apple.CoreLocationAgent.plist /System/Library/LaunchAgents/com.apple.findmymacmessenger.plist /System/Library/LaunchAgents/com.apple.homed.plist /System/Library/LaunchAgents/com.apple.icloud.findmydeviced.findmydevice-user-agent.plist /System/Library/LaunchAgents/com.apple.icloud.fmfd.plist /System/Library/LaunchAgents/com.apple.icloud.searchpartyuseragent.plist /System/Library/LaunchAgents/com.apple.iCloudUserNotifications.plist /System/Library/LaunchAgents/com.apple.photoanalysisd.plist /System/Library/LaunchAgents/com.apple.photolibraryd.plist /System/Library/LaunchAgents/com.apple.PhotoLibraryMigrationUtility.XPC.plist /System/Library/LaunchAgents/com.apple.RemoteDesktop.plist /System/Library/LaunchAgents/com.apple.RemoteManagementAgent.plist /System/Library/LaunchAgents/com.apple.screensharing.agent.plist /System/Library/LaunchAgents/com.apple.screensharing.MessagesAgent.plist /System/Library/LaunchAgents/com.apple.ScreenTimeAgent.plist /System/Library/LaunchAgents/com.apple.Siri.agent.plist /System/Library/LaunchAgents/com.apple.siriknowledged.plist /System/Library/LaunchAgents/com.apple.UsageTrackingAgent.plist /System/Library/LaunchAgents/com.openssh.ssh-agent.plist /System/Library/LaunchDaemons/com.apple.bluetoothd.plist /System/Library/LaunchDaemons/com.apple.findmymac.plist /System/Library/LaunchDaemons/com.apple.icloud.findmydeviced.plist /System/Library/LaunchDaemons/com.apple.icloud.searchpartyd.plist /System/Library/LaunchDaemons/com.apple.locate.plist /System/Library/LaunchDaemons/com.apple.locationd.plist /System/Library/LaunchDaemons/com.apple.RemoteDesktop.PrivilegeProxy.plist /System/Library/LaunchDaemons/com.apple.remotemanagementd.plist /System/Library/LaunchDaemons/com.apple.remotepairtool.plist /System/Library/LaunchDaemons/com.apple.screensharing.plist /System/Library/LaunchDaemons/ssh.plist 
+
+reboot enable sip etc..
+
+*note* the above one liner does not include all the agents listed in pwnsdx script.
+______________________________________________________________________________________________
+Debloat MacOs stock Applications Catalina and below.
+
+disable sip 
+sudo mount -uw / 
+use AppCleaner to remove stock mac applications siri,mail,calender etc. 
+
+*note* AppCleaner will ask twice to remove the stock applications 
+
+empty trash 
+reboot 
+enable sip
+
+______________________
 disable 
-
+______________________
 
 
 #!/bin/bash
@@ -420,15 +452,4 @@ done
 
 ____________________________________
 
-another alternative is to rm all the listed agents in the disable script for example like this 
-
-Disable SIP 
-
-Reboot
-
-Sudo -s 
-
-Sudo mount -uw /
-
-sudo rm -rf /System/Library/LaunchAgents/com.apple.applespell.plist /System/Library/LaunchAgents/com.apple.appstoreagent.plist /System/Library/LaunchAgents/com.apple.cloudd.plist /System/Library/LaunchAgents/com.apple.cloudpaird.plist /System/Library/LaunchAgents/com.apple.cloudphotod.plist /System/Library/LaunchAgents/com.apple.CoreLocationAgent.plist /System/Library/LaunchAgents/com.apple.findmymacmessenger.plist /System/Library/LaunchAgents/com.apple.homed.plist /System/Library/LaunchAgents/com.apple.icloud.findmydeviced.findmydevice-user-agent.plist /System/Library/LaunchAgents/com.apple.icloud.fmfd.plist /System/Library/LaunchAgents/com.apple.icloud.searchpartyuseragent.plist /System/Library/LaunchAgents/com.apple.iCloudUserNotifications.plist /System/Library/LaunchAgents/com.apple.photoanalysisd.plist /System/Library/LaunchAgents/com.apple.photolibraryd.plist /System/Library/LaunchAgents/com.apple.PhotoLibraryMigrationUtility.XPC.plist /System/Library/LaunchAgents/com.apple.RemoteDesktop.plist /System/Library/LaunchAgents/com.apple.RemoteManagementAgent.plist /System/Library/LaunchAgents/com.apple.screensharing.agent.plist /System/Library/LaunchAgents/com.apple.screensharing.MessagesAgent.plist /System/Library/LaunchAgents/com.apple.ScreenTimeAgent.plist /System/Library/LaunchAgents/com.apple.Siri.agent.plist /System/Library/LaunchAgents/com.apple.siriknowledged.plist /System/Library/LaunchAgents/com.apple.UsageTrackingAgent.plist /System/Library/LaunchAgents/com.openssh.ssh-agent.plist /System/Library/LaunchDaemons/com.apple.bluetoothd.plist /System/Library/LaunchDaemons/com.apple.findmymac.plist /System/Library/LaunchDaemons/com.apple.icloud.findmydeviced.plist /System/Library/LaunchDaemons/com.apple.icloud.searchpartyd.plist /System/Library/LaunchDaemons/com.apple.locate.plist /System/Library/LaunchDaemons/com.apple.locationd.plist /System/Library/LaunchDaemons/com.apple.RemoteDesktop.PrivilegeProxy.plist /System/Library/LaunchDaemons/com.apple.remotemanagementd.plist /System/Library/LaunchDaemons/com.apple.remotepairtool.plist /System/Library/LaunchDaemons/com.apple.screensharing.plist /System/Library/LaunchDaemons/ssh.plist 
 
