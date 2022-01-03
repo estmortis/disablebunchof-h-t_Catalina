@@ -32,7 +32,7 @@ reboot
 enable sip
 
 ______________________
-disable 
+ run this to disable >>
 ______________________
 
 
@@ -247,14 +247,15 @@ done
 
 ____________________________
 
-enable 
+run this to enable 
+______________________________________
 
 #!/bin/bash
 
 # IMPORTANT: Don't forget to logout from your Apple ID in the settings before running it!
 # IMPORTANT: You will need to run this script from Recovery. In fact, macOS Catalina brings read-only filesystem which prevent this script from working from the main OS.
 # This script needs to be run from the volume you wish to use.
-# E.g. run it like this: cd /Volumes/Macintosh\ HD && sh /Volumes/Macintosh\ HD/Users/sabri/Desktop/disable.sh
+# E.g. run it like this: cd /Volumes/Macintosh\ HD && sh /Volumes/Macintosh\ HD/Users/username/Desktop/disable.sh
 
 # Get active services: launchctl list | grep -v "\-\t0"
 # Find a service: grep -lR [service] /System/Library/Launch* /Library/Launch* ~/Library/LaunchAgents
