@@ -1,4 +1,16 @@
-# disablebunchof-h-t_Catalina
-all credit to pwnsdx // 
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-updated .sh of his with added agents/daemons plus a one liner to just rm as a alternative.
+\f0\fs24 \cf0 Disable SIP\
+\
+Reboot\
+\
+Sudo -s\
+\
+Sudo mount -uw /\
+\
+run d3bl0@t3r.sh}
